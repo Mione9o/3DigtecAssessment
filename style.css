@@ -1,0 +1,12 @@
+.banner {
+  font-family: 'sunny_spellsregular', sans-serif;
+  font-size: 4em;
+  color: #2c2ced;
+  position: absolute;
+  text-shadow: 4px 4px 10px #f9e824;
+  padding: 2em;
+  top: -20%;
+  opacity: 1;
+  font-weight: normal;
+  font-style: normal;
+}
