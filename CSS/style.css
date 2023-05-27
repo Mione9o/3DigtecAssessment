@@ -23,6 +23,7 @@ body {
   max-width: 100%;
   height: 400px;
   background-attachment: fixed;
+  z-index: 1;
 }
 
 #bg_image2 {
@@ -31,6 +32,7 @@ body {
   max-width: 100%;
   height: 400px;
   background-attachment: fixed;
+  z-index: 1;
 }
 
 #bg_image3 {
@@ -39,6 +41,7 @@ body {
   max-width: 100%;
   height: 400px;
   background-attachment: fixed;
+  z-index: 1;
 }
 
 #bg_image4 {
@@ -47,6 +50,7 @@ body {
   max-width: 100%;
   height: 400px;
   background-attachment: fixed;
+  z-index: 1;
 }
 
 .banner {
@@ -63,8 +67,138 @@ body {
 }
 
 section {
-  width: 100%;
+  max-width: 100%;
   background-color: #FFDF00;
   margin: auto;
   padding: 20px;
+  z-index: 1;
+}
+
+/* Navigation */
+
+.menu {
+  height: 36px;
+  width: 40px;
+  float: right;
+  position: relative;
+  margin: 30px 30px 0 0;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.hide {
+ opacity: 0;
+ visibility: hidden;
+}
+
+.nav_arrow {
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(225deg);
+  transition: 0.3s;
+}
+
+.arrow_show {
+  transform: rotate(45deg);
+}
+
+.navigation {
+  background-color: rgba(0, 0, 0, 1);
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s ease-in-out 
+  4s,opacity 4s ease-in-out;
+  text-align: center;
+  z-index: 2;
+}
+
+.navigation.show {
+  background-color: rgba(0, 0, 0, 1);
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s ease-in-out 
+  3s,opacity 3s ease-in-out;
+  transition-delay: 0s;
+}
+
+.card_one {
+  background-color: red;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 10%;
+  height: 25%;
+  text-align: center;
+  z-index: 2;
+}
+
+.card_two {
+  background-color: yellow;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  width: 10%;
+  height: 25%;
+  text-align: center;
+  z-index: 2;
+}
+
+.card_three {
+  background-color: lime;
+  position: absolute;
+  top: 30%;
+  left: 55%;
+  width: 10%;
+  height: 25%;
+  text-align: center;
+  z-index: 2;
+}
+
+.card_four {
+  background-color: blue;
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 10%;
+  height: 25%;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Other Navigation Code */
+
+ul li {
+  list-style: none;
+  font-family: 'Coiny', cursive;
+}
+
+.navbar ul {
+  padding: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar ul li {
+  padding: 10px 0px;
+}
+
+.navbar ul li a {
+  visibility: inherit;
+  color: #fff;
+  text-decoration: none;
+  font-size: 38px;
+  font-weight: 200;
+}
+
+.navbar ul li a:hover {
+  color: grey;
+  transition: 1s ease-in-out;
 }
