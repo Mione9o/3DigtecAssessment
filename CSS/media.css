@@ -1,0 +1,154 @@
+@media only screen and (max-width: 1255px) {
+
+.banner {
+  font-size: 3em;
+  top: -15%;
+  left: 13.2%;
+}
+  
+}
+
+@media only screen and (max-width: 985px) {
+
+.banner {
+  font-size: 2em;
+  top: 5.4%;
+  left: 20.6%;
+}
+  
+}
+
+@media only screen and (max-width: 767px) {
+
+.banner {
+  top: -10%;
+}
+
+}
+
+@media only screen and (min-width: 412px) and  (max-width: 480px) {
+  
+.menu {
+  height: 21px;
+  width: 18px;
+}
+
+.nav_arrow {
+  border-width: 0 3px 3px 0;
+  padding: 4px;
+}
+
+.navigation {
+  height: 56%;
+}
+
+ .cardOne_front, .cardOne_inside { 
+  top: 20%;
+  left: 15%;
+  width: 15%;
+  height: 15%;
+ }
+
+.cardOne_side {
+  top: 20%;
+  left: 14.5%;
+  width: 24.5%;
+  height: 25%;
+}
+
+.card_one:hover .cardOne_front, .card_three:hover .cardThree_front {
+  transform: translate(-42px, 0px) rotateY(180deg);
+}
+
+.card_one:hover .cardOne_side, .card_three:hover .cardThree_side {
+  transform: translate(-40px, 0px) rotateY(180deg);
+  opacity: 1;
+}
+
+.card_one:hover .cardOne_inside, .card_three:hover .cardThree_inside {
+  transform: translate(45px, 0px);
+}
+
+.cardOne_button, .cardTwo_button, .cardThree_button, .cardFour_button {
+  top: 60%;
+  border: 1px solid #556699;
+  border-radius: 3px;
+  box-shadow: 0 1px #444444;
+  padding: 4px 8px;
+  font: normal bold 5px/1 "Open Sans", sans-serif;
+}
+  
+.cardTwo_front, .cardTwo_inside {
+  top: 20%;
+  left: 60%;
+  width: 15%;
+  height: 15%;
+}
+
+.cardTwo_side {
+  top: 20%;
+  left: 59.5%;
+  width: 25%;
+  height: 30%;
+}
+
+.card_two:hover .cardTwo_front, .card_four:hover .cardFour_front {
+  transform: translate(-50px, 0px) rotateY(180deg);
+}
+
+.card_two:hover .cardTwo_side, .card_four:hover .cardFour_side {
+  transform: translate(-47.5px, 0px) rotateY(180deg);
+  opacity: 1;
+}
+
+.card_two:hover .cardTwo_inside, .card_four:hover .cardFour_inside {
+  transform: translate(40px, 0px);
+}
+  
+.cardThree_front, .cardThree_inside {
+  top: 60%;
+  left: 15%;
+  width: 15%;
+  height: 15%;
+}
+
+.cardThree_side {
+  top: 60.2%;
+  left: 14.6%;
+  width: 25%;
+  height: 25%;
+}
+  
+.cardFour_front, .cardFour_inside {
+  top: 60%;
+  left: 60%;
+  width: 15%;
+  height: 15%;
+}  
+
+.cardFour_side {
+  top: 60%;
+  left: 59.5%;
+  width: 25%;
+  height: 25%;
+}
+
+.cardOne_content, .cardTwo_content, .cardThree_content, .cardFour_content {
+  font-size: 0.8em;
+}
+  
+p {
+  font-size: 0.5em;
+}
+  
+.home, .links {
+  font-size: 0.8em;
+}
+  
+.banner {
+  font-size: 1em;
+  top: -2%;
+  left: 15%;
+}
+
+}
