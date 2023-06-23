@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.cdnfonts.com/css/sunny-spells" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,61 +28,88 @@
   <div class="navigation">
     <br>
     <a href="index.html" class="home">Wanna go back to the beginning? Click here</a>
-    <div class="card_one">
-      <section class="cardOne_inside">
-        <p>Want to learn about stars? Click the button below:</p>
-        <div id="navigation_one">
-         <a href="stars.html" class="cardOne_button">About</a>
-        </div>
-      </section>
-      <section class="cardOne_front">
-        <h2 class="cardOne_content">Learn About Stars</h2>
-      </section>
-      <img src="../images/stars.jpg" class="cardOne_side">
-    </div>
-    <div class="card_two">
-      <section class="cardTwo_inside">
-        <p>Want to learn about planets? Click the button below:</p>
-        <div id="navigation_two">
-          <a href="planets.html" class="cardTwo_button">About</a>
-        </div>
-      </section>
-      <section class="cardTwo_front">
-        <h2 class="cardTwo_content">Learn About Planets</h2>
-      </section>
-      <img src="../images/planets.jpeg" class="cardTwo_side">
-    </div>
-    <div class="card_three">
-      <section class="cardThree_inside">
-        <p>Want to learn about galaxies? Click the button below:</p>
-        <div id="navigation_three">
+    <div class="cards">
+      <div class="card_one">
+        <section class="cardOne_inside">
+          <p class="nav_text">Want to learn about stars? Click the button below:</p>
+          <div id="navigation_one">
+          <a href="stars.html" class="cardOne_button">About</a>
+          </div>
+        </section>
+        <section class="cardOne_front">
+          <h2 class="cardOne_content">Learn About Stars</h2>
+        </section>
+        <img src="../images/stars.jpg" alt="Image of a Solar Flare Explosion (Star)" class="cardOne_side">
+      </div>
+      <div class="card_two">
+        <section class="cardTwo_inside">
+          <p class="nav_text">Want to learn about planets? Click the button below:</p>
+          <div id="navigation_two">
+            <a href="planets.html" class="cardTwo_button">About</a>
+          </div>
+        </section>
+        <section class="cardTwo_front">
+          <h2 class="cardTwo_content">Learn About Planets</h2>
+        </section>
+        <img src="../images/planets.jpeg" alt="The night sky, filled with slightly faded versions of the planets in our solar system" class="cardTwo_side">
+      </div>
+      <div class="card_three">
+        <section class="cardThree_inside">
+          <p class="nav_text">Want to learn about galaxies? Click the button below:</p>
+          <div id="navigation_three">
           <a href="galaxy.html" class="cardThree_button">About</a>
-        </div>
-      </section>
-      <section class="cardThree_front">
-        <h2 class="cardThree_content">Learn About Galaxies</h2>
-      </section>
-      <img src="../images/galaxy.jpg" class="cardThree_side">
+          </div>
+        </section>
+        <section class="cardThree_front">
+          <h2 class="cardThree_content">Learn About Galaxies</h2>
+        </section>
+        <img src="../images/galaxy.jpg" alt="Deep space, showing Nebulas and Stars" class="cardThree_side">
+      </div>
+      <div class="card_four">
+        <section class="cardFour_inside">
+          <p class="nav_text">Want to play our game about space? Click the button below:</p>
+          <div id="navigation_four">
+            <a href="program.html" class="cardFour_button">Play</a>
+          </div>
+        </section>
+        <section class="cardFour_front">
+          <h2 class="cardFour_content">Play Our Game</h2>
+        </section>
+        <img src="../images/solar_system.jpg" alt="The Solar System, in view from Earth's moon" class="cardFour_side">
+      </div>
     </div>
-    <div class="card_four">
-      <section class="cardFour_inside">
-        <p>Want to play our game about space? Click the button below:</p>
-        <div id="navigation_four">
-          <a href="program.html" class="cardFour_button">Play</a>
-        </div>
-      </section>
-      <section class="cardFour_front">
-        <h2 class="cardFour_content">Play Our Game</h2>
-      </section>
-      <img src="../images/solar_system.jpg" class="cardFour_side">
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <a href="sources.html" class="links">Wanna see where we got our info? Click here</a>
+    <ul class="phone_nav">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="stars.html">About Stars</a>
+      </li>
+      <li>
+        <a href="planets.html">About Planets</a>
+      </li>
+      <li>
+        <a href="galaxy.html">About Galaxies</a>
+      </li>
+      <li>
+        <a href="program.html">Game</a>
+      </li>
+      <li>
+        <a href="sources.html">References</a>
+      </li>
+    </ul>
   </div>
   
   <div id="bg_image1"></div>
   <section></section>
-  <div id="bg_image2"></div>
+  <div id="bg_image2">
+    <section class="info">
+      <h2>Welcome to my Space Website!</h2>
+      <p>Hello all, and welcome to my Space website! In this website, I will be teaching you all about the space that surrounds us. You will learn about the various objects within space, such as stars, planets, and galaxies. Once you're done reading, there is also a page containing a game to do with the solar system, which will help you learn about the formation of the planets within it. So what are you waiting for? Start reading!</p>
+    </section>
+  </div>
   <section></section>
   <div id="bg_image3"></div>
   <section></section>
@@ -89,6 +117,10 @@
   <section></section>
   <footer></footer>
 
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+  
   <script src="script.js"></script>
 </body>  
 </html>
