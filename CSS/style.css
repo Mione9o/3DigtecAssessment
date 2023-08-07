@@ -572,6 +572,10 @@ p, a {
   color: #fff;
 }
 
+ul li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -594,6 +598,6 @@ a:hover {
   }
 }
 
-.banner, .info {
+.banner, .info, .title {
   animation: transitionIn 0.75s;
 }
