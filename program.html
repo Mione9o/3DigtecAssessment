@@ -137,9 +137,31 @@
   </div>
 
   <button class="playButton" onclick="loadIn();">Enter</button>
+
+  <section class="begin">
+    <h2>Welcome!</h2>
+    <p>Welcome to our game about the Solar System! Before you begin playing, let us go through the tutorial so you can learn how this game will work. If you don't need to go through the tutorial, just press "skip" down below. Otherwise, press "begin" to start!</p>
+    <button class="gui" id="begin" onclick="beginTutorial()">Begin</button>
+    <button class="gui" id="skip" onclick="skipTutorial()">Skip</button>
+  </section>
+
+  <section class="exiting">
+    <button class="x" onclick="returnGame()">X</button>
+    <h2>Are you sure you want to quit?</h2>
+    <button class="quit" onclick="quitGame()">Quit</button>
+  </section>
+
   
-  <footer></footer>
+  <div id="life">
+    <img src="../images/rocket.png" class="rocket">
+  </div>
+  <img src="../images/rocket_launch.webp" class="rocket_launch">
+  
+  <footer>
+    <button class="exit" onclick="exitGame()">Exit Game</button>
+  </footer>
 
   <script src="script.js"></script>
+  <script src="game.js"></script>
 </body>  
 </html>

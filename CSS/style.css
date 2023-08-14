@@ -98,13 +98,6 @@ html {
   z-index: 1;
 }
 
-section {
-  max-width: 100%;
-  background-color: #FFDF00;
-  margin: auto;
-  padding: 20px;
-}
-
 /* Navigation */
 
 .menu {
