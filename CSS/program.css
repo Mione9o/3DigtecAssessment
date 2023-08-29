@@ -167,10 +167,11 @@ section .loader span::before {
 
 .rocket {
   position: relative; top: 300px; left: 45%;
-  width: 3%;
-  height: 5%;
+  width: 4%;
+  height: 6%;
   opacity: 1;
-  transition: marginTop 0.2s, marginLeft 0.02s, rotateX 0s;
+  visibility: visible;
+  transition: translate3d 0.5s ease-in-out rotate 0s;
 }
 
 .rocket_launch  {
@@ -181,9 +182,38 @@ section .loader span::before {
   opacity: 0;
 }
 
-#life {
-  background-color: none;
-  transition: marginTop 0.2s, marginLeft 0.02s, rotate 0s;
+.planet {
+  position: relative;
+  top: 50%;
+  left: 15%;
+  width: 10%;
+  height: 10%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.planet_outline {
+  position: relative;
+  top: 80%;
+  left: 15%;
+  width: 10%;
+  height: 10%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#grabButton {
+  position: relative;
+  background-color: white;
+  top: 95%;
+  left: 50%;
+  margin: auto;
+  opacity: 1;
+  transition: 0.25s ease-in-out;
+}
+
+.grab:hover {
+  background-color: blue;
 }
 
 .show {

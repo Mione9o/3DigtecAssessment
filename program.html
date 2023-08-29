@@ -152,16 +152,17 @@
   </section>
 
   
-  <div id="life">
-    <img src="../images/rocket.png" class="rocket">
-  </div>
+  <img src="../images/rocket.png" class="rocket">
   <img src="../images/rocket_launch.webp" class="rocket_launch">
+  <img src="../images/planet.png" class="planet">
+  <img src="../images/planet_outline.png" ondrop="drop(event)" ondragover="allowDrop(event)" class="planet_outline">
+  <button id="grabButton" onclick="planetHandler(e)">Grab Planet</button>
   
   <footer>
     <button class="exit" onclick="exitGame()">Exit Game</button>
   </footer>
-
+  
   <script src="script.js"></script>
-  <script src="game.js"></script>
+  <script src="move.js"></script>
 </body>  
 </html>

@@ -32,15 +32,18 @@ function loadIn() {
     load.classList.remove('see');
     begin.classList.add('show');
     exit.classList.add('show');
-    rocket.classList.add('show');
     
   }
 };
 
 function beginTutorial() {
-  let begin = document.querySelector('.begin');
+  let begin = document.querySelector('.begin'),
+    planet = document.querySelector('.planet'),
+    outline = document.querySelector('.planet_outline');
 
   begin.classList.remove('show');
+  planet.classList.add('show');
+  outline.classList.add('show');
 }
 
 function skipTutorial() {
@@ -72,7 +75,9 @@ function quitGame() {
     nav = document.querySelector('.menu'),
     title = document.querySelector('.title'),
     exit = document.querySelector('.exit'),
-    rocket = document.querySelector('.rocket');
+    rocket = document.querySelector('.rocket'),
+    planet = document.querySelector('#planet'),
+    outline = document.querySelector('#planet_outline');
 
   load.classList.add('see');
   setTimeout(defaultScreen, 1000);
@@ -84,7 +89,8 @@ function quitGame() {
     nav.classList.remove('hide');
     title.classList.remove('hide');
     exit.classList.remove('show');
-    rocket.classList.remove('show');
+    planet.classList.remove('show');
+    outline.classList.remove('show');
   }
   setTimeout(endQuit, 4000);
 
@@ -101,56 +107,4 @@ function returnGame() {
   begin.classList.add('show');
 }
 
-function movement() {
-  document.onkeydown = detectKey;
-
-  function detectKey(e) {
-    var posLeft = document.getElementById("life").offsetLeft;
-    var posTop = document.getElementById("rocket").offsetTop;
-
-    e = e || window.event;
-
-    if (e.keyCode == '38') {
-      /* Up Arrow */
-      document.getElementById("rocket").style.transform = "rotate(0deg)";
-      document.getElementById("life").style.marginTop = (posTop-10)+"px";
-    } else if (e.keyCode == '40') {
-      /* Down Arrow */
-      document.getElementById("rocket").style.transform = "rotate(180deg)";
-      document.getElementById("life").style.marginTop = (posTop+10)+"px";
-    } else if (e.keyCode == '37') {
-      /* Left Arrow */
-      document.getElementById("rocket").style.transform = "rotate(270deg)";
-      document.getElementById("life").style.marginLeft = (posLeft-10)+"px";
-    } else if (e.keyCode == '39') {
-      /* Right Arrow */
-      document.getElementById("rocket").style.transform = "rotate(90deg)";
-      document.getElementById("life").style.marginLeft = (posLeft+10)+"px";
-    }
-  }
-}
-
-function moving() {
-  let circle = document.querySelector(".rocket"),
-    moveBy = 20;
-  
-  window.addEventListener("keyup", (e) => {
-    switch (e.key) {
-      case "ArrowLeft":
-        circle.style.left = parseInt(circle.style.left) - moveBy + "px";
-        break;
-      case "ArrowRight":
-        circle.style.left = parseInt(circle.style.left) + moveBy + "px";
-        break;
-      case "ArrowUp":
-        circle.style.top = parseInt(circle.style.top) - moveBy + "px";
-        break;
-      case "ArrowDown":
-        circle.style.top = parseInt(circle.style.top) + moveBy + "px";
-        break;
-    }
-  });
-}
-
 navigation();
-moving();
