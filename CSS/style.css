@@ -139,7 +139,7 @@ html {
   transition: visibility 0s ease-in-out 
   4s,opacity 4s ease-in-out;
   text-align: center;
-  z-index: 1;
+  z-index: 3;
 }
 
 .navigation.show {
@@ -547,6 +547,7 @@ html {
   background-image: linear-gradient(90deg, blue,darkblue);
   padding: 12px;
   border-radius: 8px;
+  z-index: 2;
   position: relative; top: 240px;
   height: auto;
 }

@@ -1,14 +1,15 @@
 let rocket = document.querySelector(".rocket");
 let planet = document.querySelector(".planet");
-let grabButton = document.querySelector("#grabButton");
+let outline = document.querySelector(".planet_outline");
+let grabButton = document.querySelector(".grabButton");
 let x = 0;
 let y = 0;
 let direction = 0;
-let planetGrab = planet.getBoundingClientRect();
 let upPressed = false;
 let rightPressed = false;
 let downPressed = false;
 let leftPressed = false;
+let isGrabbed = false;
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -62,14 +63,31 @@ function draw() {
   }
   rocket.style.transform = "translate3d("+x+"px,"+y+"px,0) rotate("+direction+"deg)";
   requestAnimationFrame(draw);
-  if ((planetGrab.left + 15) < x && (planetGrab.top - 15) > y) {
-    grabButton.style.opacity = '1';
-  } else if ((planetGrab.left + 15) < x && (planetGrab.top + 15) < y) {
-    grabButton.style.opacity = '1';
-  } else if ((planetGrab.left + 15) > x || (planetGrab.top + 15) > y) {
-    grabButton.style.opacity = '0';
+  
+  if (isGrabbed) {
+  /* Update planet position to follow rocket */
+    planet.style.transform = "translate3d("+x+"px,"+y+"px, 0)";
+  }
+  
+  if (planet.style.top + 5 < y || planet.style.left + 5 < x) {
+    grabButton.style.backgroundColor = "red";
+  } else if (planet.style.top - 5 < y || planet.style.left - 5 < x) {
+    grabButton.style.backgroundColor = "red";
   } else {
-    grabButton.style.opacity = '0';
+    grabButton.style.backgroundColor = "green";
+  }
+  
+}
+
+function planetGrab() {
+  if (grabButton.style.backgroundColor == "green") {
+    isGrabbed = !isGrabbed;
+    planet.classList.toggle('grabbed', isGrabbed);
+    if (grabButton.textContent === "Grab Planet") {
+      grabButton.textContent = "Release Planet";
+    } else {
+      grabButton.textContent = "Grab Planet";
+    }
   }
 }
 

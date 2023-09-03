@@ -147,7 +147,7 @@
 
   <section class="exiting">
     <button class="x" onclick="returnGame()">X</button>
-    <h2>Are you sure you want to quit?</h2>
+    <h2 class="exit_text">Are you sure you want to quit?</h2>
     <button class="quit" onclick="quitGame()">Quit</button>
   </section>
 
@@ -156,7 +156,7 @@
   <img src="../images/rocket_launch.webp" class="rocket_launch">
   <img src="../images/planet.png" class="planet">
   <img src="../images/planet_outline.png" ondrop="drop(event)" ondragover="allowDrop(event)" class="planet_outline">
-  <button id="grabButton" onclick="planetHandler(e)">Grab Planet</button>
+  <button class="grabButton" onclick="planetGrab()">Grab Planet</button>
   
   <footer>
     <button class="exit" onclick="exitGame()">Exit Game</button>

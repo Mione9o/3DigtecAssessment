@@ -4,6 +4,14 @@
   top: -10%;
   left: -9%;
 }
+
+.cardOne_front, .cardOne_side {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 15%;
+  height: 30%;
+}
   
 }
 

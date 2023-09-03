@@ -61,10 +61,10 @@ function skipTutorial() {
 
 function exitGame() {
   let quit = document.querySelector('.exiting'),
-    begin = document.querySelector('.begin');
+    begin = document.querySelector('.begin'),
+    button = document.querySelector('.gui');
 
-  quit.classList.add('show');
-  begin.classList.remove('show');
+  quit.classList.toggle('show');
 }
 
 function quitGame() {
@@ -74,6 +74,7 @@ function quitGame() {
     banner = document.querySelector('.banner'),
     nav = document.querySelector('.menu'),
     title = document.querySelector('.title'),
+    begin = document.querySelector('.begin'),
     exit = document.querySelector('.exit'),
     rocket = document.querySelector('.rocket'),
     planet = document.querySelector('#planet'),
@@ -88,6 +89,7 @@ function quitGame() {
     banner.classList.remove('hide');
     nav.classList.remove('hide');
     title.classList.remove('hide');
+    begin.classList.remove('show');
     exit.classList.remove('show');
     planet.classList.remove('show');
     outline.classList.remove('show');

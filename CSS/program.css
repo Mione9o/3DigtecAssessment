@@ -132,6 +132,7 @@ section .loader span::before {
   margin: auto;
   text-align: center;
   border-radius: 25%;
+  z-index: 2;
   opacity: 0;
   visibility: hidden;
 }
@@ -144,20 +145,32 @@ section .loader span::before {
 
 .exiting {
   background-image: linear-gradient(90deg, blue,darkblue);
-  position: relative; top: 240px;
-  max-height: 80%;
-  max-width: 20%;
-  padding: 20px;
+  position: absolute; top: 140px; left: 35%;
+  height: 50%;
+  width: 30%;
+  padding: 30px;
   margin: auto;
   text-align: center;
-  border-radius: 25%;
+  border-color: skyblue;
+  border-width: 5px;
+  border-radius: 10%;
+  z-index: 3;
   opacity: 0;
   visibility: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.exit_text {
+  font-size: 3em;
+  font-family: 'Space Grotesk', sans-serif;
+  padding-top: 90px;
 }
 
 .x {
   border-radius: 50%;
   float: right;
+  padding: 8px 12px;
+  font-size: 1em;
 }
 
 .quit:hover, .exit:hover, .x:hover {
@@ -190,6 +203,7 @@ section .loader span::before {
   height: 10%;
   opacity: 0;
   visibility: hidden;
+  transition: translate3d 0.5s ease-in-out rotate 0s;
 }
 
 .planet_outline {
@@ -202,22 +216,28 @@ section .loader span::before {
   visibility: hidden;
 }
 
-#grabButton {
-  position: relative;
-  background-color: white;
+.grabButton {
+  position: absolute;
+  background-color: red;
+  color: white;
   top: 95%;
-  left: 50%;
+  left: 45%;
   margin: auto;
   opacity: 1;
+  z-index: 3;
   transition: 0.25s ease-in-out;
 }
 
-.grab:hover {
-  background-color: blue;
+.grabButton:hover {
+  text-decoration: underline;
 }
 
+.grabbed {
+  cursor: grabbing;
+}
+  
 .show {
   opacity: 1;
   visibility: visible;
-  transition: 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, visibility 0s ease-in-out;
 }
