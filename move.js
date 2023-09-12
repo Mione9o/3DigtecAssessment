@@ -5,6 +5,8 @@ let grabButton = document.querySelector(".grabButton");
 let x = 0;
 let y = 0;
 let direction = 0;
+let planetTop = 0;
+let planetLeft = 0;
 let upPressed = false;
 let rightPressed = false;
 let downPressed = false;
@@ -67,16 +69,19 @@ function draw() {
   if (isGrabbed) {
   /* Update planet position to follow rocket */
     planet.style.transform = "translate3d("+x+"px,"+y+"px, 0)";
+    planetLeft = x;
+    planetTop = y;
   }
-  
-  if (planet.style.top + 5 < y || planet.style.left + 5 < x) {
+
+  if (planetTop == y || planetLeft == x) {
+    grabButton.style.backgroundColor = "green";
+  } else if (planet.style.top + 5 < y || planet.style.left + 5 < x) {
     grabButton.style.backgroundColor = "red";
   } else if (planet.style.top - 5 < y || planet.style.left - 5 < x) {
     grabButton.style.backgroundColor = "red";
   } else {
     grabButton.style.backgroundColor = "green";
   }
-  
 }
 
 function planetGrab() {
@@ -88,6 +93,10 @@ function planetGrab() {
     } else {
       grabButton.textContent = "Grab Planet";
     }
+  }
+
+  if (grabButton.textContent === "Release Planet") {
+    grabButton.style.backgroundColor = "green";
   }
 }
 

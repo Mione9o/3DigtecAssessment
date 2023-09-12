@@ -16,6 +16,7 @@ function loadIn() {
     button = document.querySelector('.playButton'),
     banner = document.querySelector('.banner'),
     nav = document.querySelector('.menu'),
+    reference = document.querySelector('.links'),
     title = document.querySelector('.title'),
     begin = document.querySelector('.begin'),
     exit = document.querySelector('.exit'),
@@ -25,6 +26,7 @@ function loadIn() {
   banner.classList.add('hide');
   title.classList.add('hide'); 
   nav.classList.add('hide');
+  reference.classList.add('hide');
   load.classList.add('see');
   setTimeout(loadOut, 5000);
   
@@ -73,6 +75,7 @@ function quitGame() {
     button = document.querySelector('.playButton'),
     banner = document.querySelector('.banner'),
     nav = document.querySelector('.menu'),
+    reference = document.querySelector('.links'),
     title = document.querySelector('.title'),
     begin = document.querySelector('.begin'),
     exit = document.querySelector('.exit'),
@@ -88,6 +91,7 @@ function quitGame() {
     button.classList.remove('hide');
     banner.classList.remove('hide');
     nav.classList.remove('hide');
+    reference.classList.remove('hide');
     title.classList.remove('hide');
     begin.classList.remove('show');
     exit.classList.remove('show');
