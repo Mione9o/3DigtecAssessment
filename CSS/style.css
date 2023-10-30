@@ -83,6 +83,10 @@ html {
 	}
 }
 
+.star_page {
+  overflow: visible;
+}
+
 .banner {
   font-family: 'sunny_spellsregular', Arial, sans-serif;
   font-size: 4em;
@@ -504,7 +508,7 @@ html {
   position: absolute; top: 95%; left: 37.5%;
 }
 
-/* Other Navigation Code */
+/* Phone Navigation Code */
 
 .phone_nav li {
   list-style: none;
@@ -542,7 +546,7 @@ html {
   visibility: hidden;
 }
 
-/* Website */
+/* Sections & Text */
 
 .reference, .info {
   width: 60%;
@@ -595,6 +599,79 @@ a:hover {
   text-decoration: underline;
 }
 
+.info #star {
+  position: relative; top: -40%;
+}
+
+.info #constellation {
+  position: relative; top: -80%;
+}
+
+/* Images */
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  width: 70%;
+  height: 60%;
+  position: relative;
+  background: none;
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  height: 45%;
+  display: flex;
+  align-items: center;
+  animation: slideshow 10s linear infinite;
+}
+
+.slide img {
+  height: 40%;
+  padding: 0 30px 0 30px;
+}
+
+.slider::before, .slider::after {
+  height: 45%;
+  width: 200px;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, none 0%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right:0;
+  top:0;
+  transform: rotateZ(180deg);
+}
+
+.shooting_star {
+  position: relative; left: 90%;
+  width: 8%;
+  height: 8%;
+  transform: rotate(30deg);
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out, transform 2s ease-in-out;
+}
+
+.shooting_star:hover {
+  width: 8.5%;
+  height: 8.5%;
+}
+
 /* CSS Animation */
 
 @keyframes transitionIn {
@@ -611,4 +688,14 @@ a:hover {
 
 .banner, .info, .title {
   animation: transitionIn 0.75s;
+}
+
+.move {
+  transform: translate(-1000%, 0%) rotateY(180deg);
+  transition: transform 2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+@keyframes slideshow {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
 }

@@ -93,5 +93,10 @@
   font-size: 0.8em;
 }
 
-21st June - All Navigation Cards Front Covers Changed Colours, Button and Button:hover Colours Changed on All Cards, All Planned Sections of Content Added On Each Page, sunny_spells-demo.html Deleted (Unnecessary Page)
-23rd June - Navigation Changed To Previous Year's Navigation When Using Website On Phone (Media Queries), Alt Tags Added To All Images On Navigation Cards, v1.css Created (To Store Code Needed For M+ In Processes Assessment)
+https://pixabay.com/photos/stars-constellation-universe-bull-2630050/
+
+@keyframes starTouch {
+  0% {translate: (0%, 0%);}
+  50% {translate: (-45%, -45%);}
+  100% {translate: (-90%, -90%); transform: rotateY(360deg);}
+}
