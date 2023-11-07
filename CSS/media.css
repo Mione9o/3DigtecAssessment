@@ -44,8 +44,8 @@
 }
 
 @media only screen and (min-width: 412px) and (max-width: 480px) {
-
-.navigation {
+  
+  .navigation {
   height: 100%;
 }
 
@@ -58,9 +58,51 @@
   opacity: 0;
   visibility: hidden;
 }
+
+.info, .reference {
+  width: 70%;
+}
   
-p {
-  font-size: 0.45em;
+.info h2, .reference h2 {
+  font-size: 0.95em;
+}
+  
+.info p {
+  font-size: 0.8em;
+}
+
+#planet {
+  position: relative; top: 70px;
+}
+
+#galaxy {
+  position: relative; top: 60px;
+}
+
+#planet p {
+  font-size: 0.7em;
+}
+
+#galaxy p {
+  font-size: 0.68em;
+}
+  
+.solar_system {
+  height: 35%;
+  width: 40%;
+}
+
+.milky_way {
+  height: 25%;
+  width: 25%;
+}
+  
+.reference {
+  position: relative; top: 60px;
+}
+  
+.reference a {
+  font-size: 0.6em;
 }
   
 .home, .links {
@@ -77,6 +119,11 @@ p {
   left: 15%;
 }
 
+.info {
+  width: 70%;
+  position: relative; top: 100px;
+}
+  
 .reference {
   width: 70%;
   position: relative; top: 100px;
@@ -86,6 +133,11 @@ p {
 
 .sources, .image_sources {
   text-align: center;
+  list-style: none;
+}
+
+.playButton {
+  position: relative; top: 450px; left: -200px;
 }
 
 }

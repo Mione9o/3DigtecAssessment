@@ -105,6 +105,8 @@ function planetGrab() {
 
   if (grabButton.textContent === "Release Planet") {
     grabButton.style.backgroundColor = "green";
+  } else {
+    grabButton.style.backgroundColor = "red";
   }
 }
 
